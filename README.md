@@ -27,4 +27,13 @@ The test cases in this tutorial will be similar to our test cases in [Cucumber T
 
 4. **Selenide** (version 5.11.1)
 * Instructions to install here: https://selenide.org/quick-start.html
+* maven dependency to add selenide to our project is
 
+```
+<dependency>
+    <groupId>com.codeborne</groupId>
+    <artifactId>selenide</artifactId>
+    <version>5.11.1</version>
+    <scope>test</scope>
+</dependency>
+```
