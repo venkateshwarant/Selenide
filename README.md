@@ -8,6 +8,8 @@ This tutorial shows how to run user acceptance tests against our web based [hell
 
 The test cases in this tutorial will be similar to our test cases in [Cucumber Tutorial](https://github.com/venkateshwarant/Cucumber_Tutorial) and [TestNG Tutorial](https://github.com/acapozucca/TestNG).
 
+**NOTE**:
+To run these tests, it is required to setup our product beforehand, if not done yet please follow the above link to get it configured.
 ### Software
 
 1. The Web-based Hello World case study
@@ -37,3 +39,4 @@ The test cases in this tutorial will be similar to our test cases in [Cucumber T
     <scope>test</scope>
 </dependency>
 ```
+
