@@ -78,7 +78,7 @@ You will see the outputs similar to the below, which reflects whether the tests 
 
 Here note that the build fails because we have a failing test method- testTime in TestFirstServlet, if you comment this method and run the test case, you can see that the build succeeds.
 
-Additionally, selenide automatically takes the screenshot of the browser when the test case fails and attaches inside the report.
+Additionally, selenide automatically takes the screenshot of the browser page when the test case fails and attaches inside the report.
 
 ## Selenide report
 * selenide automatically packs the test reports and screenshots in the folder /build/reports/tests/
