@@ -40,4 +40,15 @@ To run these tests, it is required to setup our product beforehand, if not done 
 </dependency>
 ```
 
+## Opening a URL
+* Unlike selenium, in selenide we need not configure the webdriver path its just enough to add the dependency and it takes care of all the selenium default configurations.
 
+* To open a URL, we need to run the below code
+```
+open(url)
+```
+
+and ofcourse we need to import 
+```
+import static com.codeborne.selenide.Selenide.*;
+```
