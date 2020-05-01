@@ -54,6 +54,17 @@ and ofcourse we need to import
 import static com.codeborne.selenide.Selenide.*;
 ```
 
+## Test description
+All the tests here are similar to the ones in [TestNG Tutorial](https://github.com/acapozucca/TestNG).
+
+To test whether the corresponding content is there in our product webpage, we have written -
+```
+$("#hi").shouldHave(text("Hi There!"));
+```
+Here we check whether content inside tag with id "hi" is "Hi There!"
+
+you can see more of selenide features [here](https://selenide.org/documentation.html).
+
 ## Running test cases
 * To run the test case, just right click inside class and run as JUnit test case.
 
