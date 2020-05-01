@@ -65,42 +65,6 @@ mvn clean test
 
 You will see the outputs similar to the below, which reflects whether the tests are running or not.
 ```
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running TestLandingPage
-SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 1278
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1588328086.733][WARNING]: FromSockAddr failed on netmask
-May 01, 2020 12:14:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.733 s - in TestLandingPage
-[INFO] Running TestFirstServlet
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.917 s <<< FAILURE! - in TestFirstServlet
-[ERROR] testTime(TestFirstServlet)  Time elapsed: 4.881 s  <<< FAILURE!
-com.codeborne.selenide.ex.ElementShould: 
-Element should have text 'Date=Fri Apr 10 10:30:46 UTC 2020' {#date}
-Element: '<h3 id="date">Date=Fri May 01 10:14:48 UTC 2020</h3>'
-Screenshot: file:/Users/venkateshwaran/eclipse-workspace/Selenide/product.helloworld.testing.selenide/build/reports/tests/1588328092373.0.png
-Page source: file:/Users/venkateshwaran/eclipse-workspace/Selenide/product.helloworld.testing.selenide/build/reports/tests/1588328092373.0.html
-Timeout: 4 s.
-	at TestFirstServlet.testTime(TestFirstServlet.java:21)
-
-[INFO] Running TestStaticPage
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s - in TestStaticPage
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Failures: 
-[ERROR]   TestFirstServlet.testTime:21 Element should have text 'Date=Fri Apr 10 10:30:46 UTC 2020' {#date}
-Element: '<h3 id="date">Date=Fri May 01 10:14:48 UTC 2020</h3>'
-Screenshot: file:/Users/venkateshwaran/eclipse-workspace/Selenide/product.helloworld.testing.selenide/build/reports/tests/1588328092373.0.png
-Page source: file:/Users/venkateshwaran/eclipse-workspace/Selenide/product.helloworld.testing.selenide/build/reports/tests/1588328092373.0.html
-Timeout: 4 s.
 [INFO] 
 [ERROR] Tests run: 4, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
@@ -110,16 +74,18 @@ Timeout: 4 s.
 [INFO] Total time:  9.305 s
 [INFO] Finished at: 2020-05-01T12:14:53+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.0:test (default-test) on project product.helloworld.testing.selenide: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/venkateshwaran/eclipse-workspace/Selenide/product.helloworld.testing.selenide/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 ```
+
+Here note that the build fails because we have a failing test method testTime in TestFirstServlet, if you comment this method and run the test case, you can see that the build succeeds.
+
+Additionally, selenide automatically takes the screenshot of the browser when the test case fails and attaches inside the report.
+
+## Selenide report
+* selenide automatically packs the test reports and screenshots in the folder /build/reports/tests/
+
+## Final remarks
+These guidelines explain how to use Selenide:
+
+* How to write basic selenide UAT
+* How to run selenide tests in IDE and maven
 
