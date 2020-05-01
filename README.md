@@ -41,7 +41,7 @@ To run these tests, it is required to setup our product beforehand, if not done 
 ```
 
 ## Opening a URL
-* Unlike selenium, in selenide we need not configure the webdriver path its just enough to add the dependency and it takes care of all the selenium default configurations.
+* Unlike selenium, in selenide we need not configure the webdriver path. Its just enough to add the dependency and it takes care of all the selenium default configurations.
 
 * To open a URL, we need to run the below code
 ```
